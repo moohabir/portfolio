@@ -66,7 +66,7 @@ function SinglePost() {
           xs={12}
           sm={12}
         >
-          <Typography variant="h2">{singlePost.title},</Typography>
+          <Typography variant="h2">{singlePost.title}</Typography>
           <div
             style={{
               display: 'flex',

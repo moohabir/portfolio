@@ -66,7 +66,6 @@ function SinglePost() {
           xs={12}
           sm={12}
         >
-          <Typography variant="h2">{singlePost.title}</Typography>
           <div
             style={{
               display: 'flex',
@@ -76,15 +75,43 @@ function SinglePost() {
               gap: '20',
             }}
           >
-            <img
-              src={singlePost?.mainImage?.asset?.url}
+            <Typography
+              variant="h2"
+              sx={{ alignSelf: 'center' }}
+            >
+              {singlePost.title}
+            </Typography>
+          </div>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              gap: '20',
+            }}
+          >
+            {/*<img
+              src={singlePost?.authorImage?.asset.ref}
               alt="ggg"
               style={{
                 height: '40vh',
                 width: '50%',
                 //alignItems: 'center',
               }}
+            />*/}
+            <img
+              src={singlePost?.mainImage?.asset.url}
+              alt="ggg"
+              style={{
+                height: '40vh',
+                width: '70%',
+                border: '1px solid gray',
+                borderRadius: '10px',
+                //alignItems: 'center',
+              }}
             />
+            <span>{singlePost.authorName}</span>
           </div>
 
           <div
